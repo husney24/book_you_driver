@@ -363,7 +363,9 @@ app.delete('/api/cars/:id', (req, res) => {
 
 
 
-const PORT = process.env.PORT || 5050;
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 5050; 
+
+app.listen(PORT, '0.0.0.0', () => {  // Add 0.0.0.0 to listen on all interfaces
     console.log(`Server running on port ${PORT}`);
 });
+
